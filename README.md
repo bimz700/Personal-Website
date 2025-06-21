@@ -65,9 +65,9 @@ bimzportfolio/
 
 Kamu bisa hubungi atau follow Bima melalui:
 
-- 📧 Email: bimzcreator@email.com
-- 📸 Instagram: [@bimz.ai](https://instagram.com/bimz.ai)
-- 📱 WhatsApp: +62xxxxxxxxxxx
+- 📧 Email: bimaaldiansyah28@gmail.com
+- 📸 Instagram: [@bimzvision](https://instagram.com/bimzvision)
+- 📱 WhatsApp: +628977491483
 
 ## 💡 Catatan
 
