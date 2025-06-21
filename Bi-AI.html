@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="BI AI by @bimz">
+  <meta name="copyright" content="BI AI © 2025 Bimz Studios">
+  <title>BI AI - Fantasy Character Generator</title>
+  <link rel="stylesheet" href="bi-style.css">
+  <style>
+
+    body {
+      background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      padding: 50px 20px;
+      margin: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto 50px;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      animation: fadeIn 1.5s ease;
+    }
+    
+    .navbar {
+      background-color: #fff;
+      color: black;
+      padding: 20px 0;
+      width: 100%;
+      margin: 0 auto 40px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 40px;
+    }
+
+
+    .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .nav-links li a {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #ff5733; 
+  transform: scale(1.05);
+}
+
+
+    .nav-links li a {
+      color: black;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    
+    .nav-links li a[href="bi-ai.html"] {
+  font-weight: bold;
+  color: #ffd700;
+}
+
+    .nav-links li a:hover {
+      color: #ffe8d6;
+    }
+
+    h1, h2 {
+      color: #240000;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.6;
+      text-align: justify;
+    }
+
+    ul {
+      font-size: 1.1em;
+      padding-left: 20px;
+    }
+
+    .image-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .image-grid img {
+      width: 150px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .cta-button {
+      display: block;
+      margin: 40px auto 0;
+      padding: 12px 25px;
+      font-size: 1em;
+      background-color: #240000;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+      transition: all 0.3s ease;
+      width: fit-content;
+    }
+
+    .cta-button:hover {
+      background-color: #fff;
+      color: #240000;
+      border: 2px solid #240000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      color: #777;
+      font-size: 0.9em;
+    }
+    
+    .output {
+  background: #240000;
+  padding: 20px;
+  border-radius: 10px;
+  white-space: pre-wrap;
+}
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }    
+  </style>
+</head>
+<body>
+	
+	
+	<nav class="navbar">
+    <div class="nav-container">
+      <span class="logo">BimzVision</span>
+      <ul class="nav-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="contact.html">Kontak</a></li>
+        <li><a href="jasa.html"> Jasa</a></li>
+        <li><a href="bi-ai.html"> ai</a></li>
+      </ul>
+    </div>
+  </nav>
+	
+  <div class="container">
+    <h1>BI AI: Fantasy Character Generator</h1>
+    <form id="characterForm">
+      <input type="text" id="name" placeholder="Nama Karakter" required style="display: block; text-align: center; margin: 30px auto 0; padding: 12px 25px; font-size: 1em; background-color: #240000; color: white; border-radius: 8px; text-decoration: none; width: fit-content; transition: all 0.3s ease;">
+      <input type="text" id="element" placeholder="Elemen (tanah, api, air...)" required style="display: block; text-align: center; margin: 30px auto 0; padding: 12px 25px; font-size: 1em; background-color: #240000; color: white; border-radius: 8px; text-decoration: none; width: fit-content; transition: all 0.3s ease;">
+      <input type="text" id="trait" placeholder="Sifat (kalem, pemberani...)" required style="display: block; text-align: center; margin: 30px auto 0; padding: 12px 25px; font-size: 1em; background-color: #240000; color: white; border-radius: 8px; text-decoration: none; width: fit-content; transition: all 0.3s ease;">
+      <button type="submit" style="display: block; text-align: center; margin: 30px auto 0; padding: 12px 25px; font-size: 1em; background-color: #240000; color: white; border-radius: 8px; text-decoration: none; width: fit-content; transition: all 0.3s ease;">Generate Karakter</button>
+    </form>
+    <div class="output"id="result">
+      <p>Isi form untuk membuat karakter dunia fantasi unikmu!</p>
+    </div>
+  </div>
+
+  <script src="bi-script.js"></script>
+</body>
+</html>
+
