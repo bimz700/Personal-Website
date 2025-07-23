@@ -1,4 +1,4 @@
-const apiKey = "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"; // Ganti dengan API key milikmu
+const apiKey = "proces.env.OPENAI_API_KEY"; // Ganti dengan API key milikmu
 const submitBtn = document.getElementById("submitBtn");
 const inputText = document.getElementById("inputText");
 const outputBox = document.getElementById("outputBox");
