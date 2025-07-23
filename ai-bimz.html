@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bimz AI Tools</title>
+  <link rel="stylesheet" href="css/chat.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Bimz AI Tools</h1>
+    <label for="toolSelect">Pilih Fitur AI:</label>
+    <select id="toolSelect">
+      <option value="chat">1. AI Chat Assistant</option>
+      <option value="translate">2. Penerjemah Bahasa</option>
+      <option value="cv">3. Pembuat CV</option>
+      <option value="grammar">4. Koreksi Grammar</option>
+      <option value="article">5. Pembuat Artikel</option>
+      <option value="caption">6. Pembuat Caption</option>
+      <option value="code">7. Pembantu Coding</option>
+    </select>
+  </div>
+
+  <div>
+    <div class="button">
+    <textarea id="inputText" placeholder="Tulis sesuatu di sini..."></textarea>
+    <button id="submitBtn">Kirim ke AI</button>
+    <div id="outputBox"></div>
+  </div>
+
+  <script src="js/ai-script.js"></script>
+</body>
+</html>
